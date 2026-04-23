@@ -1,0 +1,29 @@
+name: Homebrew Cask Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+env:
+  HOMEBREW_DEVELOPER: 1
+  HOMEBREW_NO_AUTO_UPDATE: 1
+
+jobs:
+  cask-test:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+
+      - name: Audit Cask
+        run: brew audit --cask ./Casks/ccmanager.rb
+
+      - name: Fetch Cask
+        run: brew fetch --cask ./Casks/ccmanager.rb
