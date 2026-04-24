@@ -23,7 +23,7 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@main
 
       - name: Audit Cask
-        run: brew audit --cask ./Casks/ccmanager.rb
+        run: brew audit --cask ccmanager
 
       - name: Fetch Cask
-        run: brew fetch --cask ./Casks/ccmanager.rb
+        run: brew fetch --cask ccmanager
