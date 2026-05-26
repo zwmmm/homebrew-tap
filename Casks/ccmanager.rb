@@ -1,6 +1,6 @@
 cask "ccmanager" do
-  version "1.12.9"
-  sha256 "e14da67638a91740708d1683589cc52717841ae5bc71eb7a57931ba3fb648c03"
+  version "1.12.10"
+  sha256 "d7150926d7f2655a070b8e01d5971bd209d2d1674ee34469a56b8469677fef40"
 
   url "https://github.com/zwmmm/CCManager/releases/download/v#{version}/CCManager-v#{version}.dmg"
   name "CCManager"
